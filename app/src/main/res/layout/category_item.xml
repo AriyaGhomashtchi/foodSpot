@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <TextView
+            android:id="@+id/category_name_text"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="8dp"
+            android:layout_marginTop="16dp"
+            android:fontFamily="@font/paprika"
+            android:textSize="30sp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.085"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            tools:text="American Grill" />
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/category_foods_recycler"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="32dp"
+            android:orientation="horizontal"
+            app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/category_name_text"
+            tools:listitem="@layout/food_item" />
+
+        <ImageView
+            android:id="@+id/category_food_image"
+            android:layout_width="160dp"
+            android:layout_height="70dp"
+            android:layout_marginEnd="-180dp"
+            app:layout_constraintBottom_toBottomOf="@+id/category_name_text"
+            app:layout_constraintEnd_toEndOf="@+id/category_name_text"
+            app:layout_constraintHorizontal_bias="0.926"
+            app:layout_constraintStart_toStartOf="@+id/category_name_text"
+            app:layout_constraintTop_toTopOf="@+id/category_name_text"
+            app:layout_constraintVertical_bias="0.407"
+            app:srcCompat="@drawable/f1_jpg" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</layout>
